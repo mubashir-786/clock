@@ -1,0 +1,64 @@
+@font-face {
+    font-family: digital;
+    src: url(./DS-DIGIB.TTF);
+}
+body {
+    background-color: teal;
+}
+
+#time {
+    font-family: digital;
+    color: white;
+    
+}
+.divv{
+    text-align: center;
+    font-size: 4rem;
+    width: 80%;
+    margin: auto;
+    
+}
+.date {
+    
+    color: teal;
+
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+}
+h3 {
+    background-color: white;
+    border-radius: 20px;
+   font-family: sans-serif;
+   text-align: center;
+
+}
+.btn {
+    display: inline-block;
+}
+
+@media screen and (min-width:300px) and (max-width:440px){
+    #time{
+        font-size: 65px;
+    }
+    .date{
+        width: 100%;
+        font-size: 35px;
+    }
+    h3{
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1000px){
+    .divv{
+        width: 100%;
+    }
+    #time{
+        font-size: 130px;
+    }
+    .date{
+        width: 100%;
+        font-size: 60px;
+    }
+}
