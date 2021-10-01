@@ -8,6 +8,7 @@ function gettime(){
     var year = document.getElementById("year")
     var day = document.getElementById("day")
 
+
     var week = new Date().getDay()
     if (week == 0){
         day.innerHTML = "Sunday"
@@ -32,12 +33,40 @@ function gettime(){
     }
 
 
-    hour.innerHTML = new Date().getHours()
-    min.innerHTML = new Date().getMinutes()
-    sec.innerHTML = new Date().getSeconds()
+    
+    // min.innerHTML = new Date().getMinutes()
+    var minnn = new Date().getMinutes()
+   
+    if (minnn < 10 ){
+        min.innerHTML = "0" + minnn
+    }else {
+        min.innerHTML = minnn
+    } 
+
+    // sec.innerHTML = new Date().getSeconds()
+    var secc = new Date().getSeconds()
+   
+    if (secc < 10 ){
+        sec.innerHTML = "0" + secc
+    }else {
+        sec.innerHTML = secc
+    }
 
     date.innerHTML = new Date().getUTCDate()
+    // hour.innerHTML = new Date().getHours()
 
+   var hourr = new Date().getHours() -12
+   
+       if (hourr < 10 ){
+           hour.innerHTML = "0" + hourr
+       }else {
+           hour.innerHTML = hourr
+       } 
+   
+
+    
+    
+    
     var monthdis = new Date().getMonth()
     //   month.innerHTML = new Date().getMonth()
     if (monthdis == 0){
@@ -68,13 +97,13 @@ function gettime(){
         month.innerHTML = "Sept"
     }
     else if (monthdis == 9){
-        month.innerHTML = "Dec"
-    }
-    else if (monthdis == 10){
         month.innerHTML = "Oct"
     }
-    else if (monthdis == 11){
+    else if (monthdis == 10){
         month.innerHTML = "Nov"
+    }
+    else if (monthdis == 11){
+        month.innerHTML = "Dec"
     }
 
       
@@ -84,4 +113,16 @@ function gettime(){
    
     return
 }
-gettime()
+
+var interval ;
+function start(){
+   interval =  setInterval(gettime,1000)
+}
+
+
+
+function clr(){
+   
+    clearInterval(interval)
+}
+start()

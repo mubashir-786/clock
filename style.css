@@ -1,64 +1,90 @@
 @font-face {
-    font-family: digital;
+    font-family: xyz;
     src: url(./DS-DIGIB.TTF);
 }
 body {
-    background-color: teal;
+    background-color: cornsilk;
 }
-
-#time {
-    font-family: digital;
+.divv {
+    background-color:  black;
     color: white;
-    
-}
-.divv{
+    width: 50%;
+    margin: auto;
     text-align: center;
-    font-size: 4rem;
-    width: 80%;
-    margin: auto;
-    
+    height: 19.5vh;
+   border: outset 25px  ;
+   position: relative;
+   top: 200px;
 }
-.date {
-    
-    color: teal;
-
-    width: 60%;
-    margin: auto;
-    border-radius: 20px;
+h1 {
+  font-family: xyz;
+  font-size: 7rem;
+  position: relative;
+  bottom:  70px;
 }
 h3 {
-    background-color: white;
-    border-radius: 20px;
-   font-family: sans-serif;
-   text-align: center;
+    font-family: sans-serif;
+    font-size: 2rem;
+    position: relative;
+    bottom: 145px;
 
 }
-.btn {
-    display: inline-block;
+.btnn {
+    margin: auto;
+    width: 50%;
+    position: relative;
+    top: 220px;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+.res {
+    /* padding: 12px; */
+    width: 80px;
+    font-size: 15px;
+    height: 4vh;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+
+}
+.pau {
+    /* padding: 12px; */
+    width: 80px;
+    font-size: 15px;
+    height: 4vh;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 10px;
 }
 
-@media screen and (min-width:300px) and (max-width:440px){
-    #time{
-        font-size: 65px;
-    }
-    .date{
-        width: 100%;
-        font-size: 35px;
-    }
-    h3{
-        padding: 5px;
-    }
-}
+@media screen and (min-width:250px) and (max-width: 450px) {
 
-@media screen and (min-width:600px) and (max-width:1000px){
+    .divv {
+        width: 90%;
+        border: inset 10px;
+        height: 17vh;
+    }
+    h1 {
+        font-size: 4rem;
+        position: relative;
+        top: -40px;
+        
+    }
+    h3 {
+        font-size: 1.5rem;
+        position: relative;
+        top:  -80px;
+    }
+   
+  
+    
+}
+@media screen and (min-width:600px) and (max-width: 1200px){
     .divv{
-        width: 100%;
-    }
-    #time{
-        font-size: 130px;
-    }
-    .date{
-        width: 100%;
-        font-size: 60px;
+        width: 90%;
     }
 }
+
