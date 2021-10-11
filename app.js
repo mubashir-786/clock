@@ -108,6 +108,7 @@ function gettime(){
 
       
     year.innerHTML = new Date().getFullYear()
+    
       
 
    
@@ -116,7 +117,10 @@ function gettime(){
 
 var interval ;
 function start(){
+    if(!interval){
    interval =  setInterval(gettime,1000)
+   return
+    }
 }
 
 
@@ -124,5 +128,18 @@ function start(){
 function clr(){
    
     clearInterval(interval)
+    interval = ""
 }
 start()
+
+// var maintain;
+// function toStart(){
+//     if(!maintain){
+//     maintain=setInterval(toCall,1000)
+// }
+// }
+
+// function toStop(){
+//     clearInterval(maintain)
+//     maintain=null
+// }
